@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Alex Yarotski</title>
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+  <main class="page">
+    <header class="hero" aria-label="Портфолио">
+      <div class="eyebrow">Portfolio</div>
+      <h1>Alex Yarotski</h1>
+      <p class="lead">Playable ads | Cocos Creator</p>
+    </header>
+
+    <nav class="filters" aria-label="Фильтр проектов">
+      <button class="filter-button is-active" type="button" data-filter="all">All</button>
+      <button class="filter-button" type="button" data-filter="2d">2D</button>
+      <button class="filter-button" type="button" data-filter="3d">3D</button>
+      <button class="filter-button" type="button" data-filter="video">Video</button>
+    </nav>
+
+    <section class="grid" id="projectsGrid" aria-label="Список проектов"></section>
+  </main>
+
+  <div class="modal" id="modal" aria-hidden="true">
+    <button class="close" type="button" aria-label="Закрыть просмотр">&times;</button>
+    <div class="phone-viewer" role="dialog" aria-modal="true" aria-labelledby="viewerTitle">
+      <div class="phone-frame">
+        <div class="phone-screen">
+          <iframe
+            id="projectFrame"
+            title="Просмотр проекта"
+            allow="autoplay; fullscreen"
+          ></iframe>
+        </div>
+      </div>
+      <span class="sr-only" id="viewerTitle">Проект</span>
+    </div>
+  </div>
+
+  <script src="assets/js/projects.js"></script>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>
