@@ -7,11 +7,17 @@
   <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
+  <canvas class="game-bg" id="gameBg" aria-hidden="true"></canvas>
+  <div class="score-board" id="scoreBoard" aria-live="polite">SCORE 000000</div>
   <main class="page">
     <header class="hero" aria-label="Портфолио">
-      <div class="eyebrow">Portfolio</div>
-      <h1>Alex Yarotski</h1>
-      <p class="lead">Playable ads | Cocos Creator</p>
+      <div class="eyebrow">BOOT: PORTFOLIO.EXE</div>
+      <h1 class="typewriter" id="heroTitle" data-text="Alex Yarotski" aria-label="Alex Yarotski">Alex Yarotski</h1>
+      <p class="lead console-line" id="heroLead" data-text="Playable ads | Cocos creator">Playable ads | Cocos creator</p>
+      <div class="contacts" aria-label="Contacts">
+        <a class="contact-button" href="https://t.me/reosob" target="_blank" rel="noopener noreferrer">Telegram</a>
+        <a class="contact-button" href="https://www.linkedin.com/in/alexyarotski/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      </div>
     </header>
 
     <nav class="filters" aria-label="Фильтр проектов">
