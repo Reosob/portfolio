@@ -2,7 +2,7 @@ const PROJECTS = [
   {
     title: "Slots",
     category: "2d",
-    preview: "preview/2D/%D0%91%D0%B5%D0%B7%20%D0%BD%D0%B0%D0%B7%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F%20(1).jpg",
+    preview: "preview/2D/Slots.png",
     url: "projects/2D/Slots.html",
     frameWidth: 360
   },
@@ -65,21 +65,21 @@ const PROJECTS = [
   {
     title: "Big Stone",
     category: "video",
-    preview: "preview/Video/%D0%91%D0%B5%D0%B7%20%D0%BD%D0%B0%D0%B7%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F%20(2).jpg",
+    preview: "preview/Video/Big%20Stone.png",
     url: "projects/Video/Big%20Stone.html",
     frameWidth: 360
   },
   {
     title: "Coins",
     category: "video",
-    preview: "preview/Video/%D0%91%D0%B5%D0%B7%20%D0%BD%D0%B0%D0%B7%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F%20(2).jpg",
+    preview: "preview/Video/Coins.png",
     url: "projects/Video/Coins.html",
     frameWidth: 360
   },
   {
     title: "Ferrying Paused",
     category: "video",
-    preview: "preview/Video/%D0%91%D0%B5%D0%B7%20%D0%BD%D0%B0%D0%B7%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F%20(2).jpg",
+    preview: "preview/Video/Ferrying%20Paused.png",
     url: "projects/Video/Ferrying%20Paused.html",
     frameWidth: 360
   }

@@ -243,6 +243,11 @@ function initGameBackground() {
   const pickups = [];
   const bullets = [];
   const explosions = [];
+  const bulletConfig = {
+    speed: 8,
+    lifetime: 180,
+    offscreenPadding: 40
+  };
   const colors = {
     star: "#7fb5ff",
     cyan: "#48f7ff",
@@ -399,13 +404,13 @@ function initGameBackground() {
     });
 
     if (!isPlayableOpen && pointer.active && time - lastShot > 190) {
-      bullets.push({ x: pointer.x, y: pointer.y - 18, life: 80 });
+      bullets.push({ x: pointer.x, y: pointer.y - 18, life: bulletConfig.lifetime });
       lastShot = time;
     }
 
     for (let i = bullets.length - 1; i >= 0; i -= 1) {
       const bullet = bullets[i];
-      bullet.y -= 8;
+      bullet.y -= bulletConfig.speed;
       bullet.life -= 1;
       ctx.fillStyle = colors.gold;
       ctx.fillRect(Math.round(bullet.x - 2), Math.round(bullet.y), 4, 12);
@@ -424,7 +429,7 @@ function initGameBackground() {
         }
       }
 
-      if (bullet.life <= 0 || bullet.y < -20) {
+      if (bullet.life <= 0 || bullet.y < -bulletConfig.offscreenPadding) {
         bullets.splice(i, 1);
       }
     }
