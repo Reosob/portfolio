@@ -15,6 +15,9 @@ const PHONE_FRAME = {
 const backgroundCanvas = document.getElementById("gameBg");
 const scoreBoard = document.getElementById("scoreBoard");
 const ACTIVE_FILTER_STORAGE_KEY = "portfolio.activeFilter";
+const PROJECTS_VOLUME_STORAGE_KEY = "portfolio.projectsVolume";
+// Change this value to control the volume for every embedded project page.
+const PROJECTS_VOLUME = 0.05;
 
 let activeFilter = "all";
 let frameLoadId = 0;
@@ -125,6 +128,14 @@ function saveActiveFilter(nextFilter) {
   }
 }
 
+function saveProjectsVolume() {
+  try {
+    window.localStorage.setItem(PROJECTS_VOLUME_STORAGE_KEY, String(PROJECTS_VOLUME));
+  } catch (error) {
+    // Projects fall back to their default audio behavior when storage is unavailable.
+  }
+}
+
 function initActiveFilter() {
   const savedFilter = getSavedFilter();
   const savedFilterExists = [...filterButtons].some((button) => button.dataset.filter === savedFilter);
@@ -162,6 +173,7 @@ function openProject(card) {
   const loadId = frameLoadId;
   const frameWidth = Number(card.dataset.frameWidth) || PHONE_FRAME.width;
 
+  saveProjectsVolume();
   title.textContent = card.dataset.title;
   setPhoneFrame(frameWidth);
   frame.src = "about:blank";
@@ -226,6 +238,7 @@ window.addEventListener("resize", () => {
 });
 
 initHeroTypewriter();
+saveProjectsVolume();
 initActiveFilter();
 
 function initGameBackground() {
@@ -404,7 +417,7 @@ function initGameBackground() {
     });
 
     if (!isPlayableOpen && pointer.active && time - lastShot > 190) {
-      bullets.push({ x: pointer.x, y: pointer.y - 18, life: bulletConfig.lifetime });
+      bullets.push({x: pointer.x, y: pointer.y - 18, life: bulletConfig.lifetime});
       lastShot = time;
     }
 
