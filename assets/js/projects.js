@@ -68,10 +68,10 @@ const PROJECTS = [
     title: "Sequence Path",
     category: "2d"
   }),
-  createProject({
-    title: "Cafe",
-    category: "3d"
-  }),
+  // createProject({
+  //   title: "Cafe",
+  //   category: "3d"
+  // }),
   createProject({
     title: "Emotional Battle",
     category: "3d"
