@@ -25,8 +25,6 @@ function createProject({
     frameWidth
   };
 }
-
-
 const PROJECTS = [
   createProject({
     title: "Cars Smart Metres",
