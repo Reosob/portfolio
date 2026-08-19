@@ -27,6 +27,14 @@ function createProject({
 }
 const PROJECTS = [
   createProject({
+    title: "Doaw",
+    category: "2d"
+  }),
+  createProject({
+    title: "Slots",
+    category: "2d"
+  }),
+  createProject({
     title: "Cars Smart Metres",
     category: "2d",
     projectName: "Car Smart Metres"
@@ -53,10 +61,6 @@ const PROJECTS = [
   }),
   createProject({
     title: "Shelf",
-    category: "2d"
-  }),
-  createProject({
-    title: "Slots",
     category: "2d"
   }),
   createProject({
